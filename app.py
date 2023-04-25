@@ -2,18 +2,19 @@
 import os
 from dotenv import load_dotenv
 # from apikey import apikey
-load_dotenv()
 
-# openai_api_key = os.getenv("OPENAI_API_KEY")
 
-import streamlit as st 
+import streamlit as st
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain 
 from langchain.memory import ConversationBufferMemory
-from langchain.utilities import WikipediaAPIWrapper 
+from langchain.utilities import WikipediaAPIWrapper
 
-apikey = os.environ['API_KEY']
+load_dotenv()
+apikey = os.getenv('OPENAI_API_KEY')
+
+# os.environ['OPENAI_API_KEY'] = apikey
 
 # App framework
 st.title('🦜🔗 YouTube Content Creator')
