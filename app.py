@@ -1,6 +1,5 @@
 # Bring in deps
 import os
-import openai
 from dotenv import load_dotenv
 #from apikey import apikey
 load_dotenv()
