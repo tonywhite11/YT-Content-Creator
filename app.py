@@ -1,8 +1,8 @@
 # Bring in deps
 import os
-# from dotenv import load_dotenv
-from apikey import apikey
-# load_dotenv()
+from dotenv import load_dotenv
+# from apikey import apikey
+load_dotenv()
 
 # openai_api_key = os.getenv("OPENAI_API_KEY")
 
@@ -13,7 +13,7 @@ from langchain.chains import LLMChain, SequentialChain
 from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper 
 
-os.environ['OPENAI_API_KEY'] = apikey
+apikey = os.environ['API_KEY']
 
 # App framework
 st.title('🦜🔗 YouTube Content Creator')
